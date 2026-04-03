@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Order</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="header">
+        <h1>Dhruv's Dine</h1>
+        <p>Order Summary</p>
+    </div>
+    <div class="menu">
+        <h2>Your Order</h2>
+        {% for item in items %}
+            <div class="item">✅ {{ item }}</div>
+        {% endfor %}
+        <div class="total">
+            <h3>Total: ₹{{ total }}</h3>
+        </div>
+        <a href="/"><button>Order More</button></a>
+    </div>
+</body>
+</html>
