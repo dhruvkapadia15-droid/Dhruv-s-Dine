@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dhruv's Dine</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="header">
+        <h1>Dhruv's Dine</h1>
+        <p>Indian . Chinese . Continental . Italian</p>
+    </div>
+    <div class="menu">
+        <h2>Our Menu</h2>
+        <form action="/order" method="POST">
+            <div class="item"><label><input type="checkbox" name="items" value="butter chicken"> Butter Chicken - ₹350</label></div>
+            <div class="item"><label><input type="checkbox" name="items" value="pannier tikka"> Pannier Tikka - ₹250</label></div>
+            <div class="item"><label><input type="checkbox" name="items" value="fried rice"> Fried Rice - ₹200</label></div>
+            <div class="item"><label><input type="checkbox" name="items" value="hakka noodles"> Hakka Noodles - ₹200</label></div>
+            <div class="item"><label><input type="checkbox" name="items" value="panner handi"> Panner Handi - ₹300</label></div>
+            <div class="item"><label><input type="checkbox" name="items" value="choole bhature"> Choole Bhature - ₹100</label></div>
+            <div class="item"><label><input type="checkbox" name="items" value="manchurian"> Manchurian - ₹90</label></div>
+            <div class="item"><label><input type="checkbox" name="items" value="vegetable soup"> Vegetable Soup - ₹150</label></div>
+            <div class="item"><label><input type="checkbox" name="items" value="pizza"> Pizza - ₹350</label></div>
+            <div class="item"><label><input type="checkbox" name="items" value="pasta"> Pasta - ₹150</label></div>
+            <button type="submit">Place Order</button>
+        </form>
+    </div>
+</body>
+</html>
